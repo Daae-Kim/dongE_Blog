@@ -1,5 +1,5 @@
 ---
-title: "Java) try catch finally VS try with resources"
+title: "try catch finally VS try with resources"
 seoTitle: "Try-Catch vs Try-With-Resources"
 datePublished: Tue May 27 2025 16:15:53 GMT+0000 (Coordinated Universal Time)
 cuid: cmb6px7vf000009l40cyedddo
