@@ -4,7 +4,7 @@ seoTitle: "Try-Catch vs Try-With-Resources"
 datePublished: Tue May 27 2025 16:15:53 GMT+0000 (Coordinated Universal Time)
 cuid: cmb6px7vf000009l40cyedddo
 slug: try-catch-finally-vs-try-with-resources
-cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1748363852148/d96f52f8-5657-4df1-8143-c851c4685b59.png
+cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1748364200990/c4a71537-d99a-4894-bf17-2fd1118be78f.png
 tags: java, exceptionhandling, try-catch-finally, try-with-resources
 
 ---
