@@ -42,13 +42,13 @@ tags: redis, redis-caching
     
     데이터를 요청했을때 데이터가 있는 경우
     
-    ![image.png](attachment:8a9d9d0b-9137-47d3-8c20-a0818c2fd2fb:image.png align="left")
+    ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1748764455091/ec703deb-cf64-412e-a57c-8c2e3027bb61.png align="center")
     
 2. **Cache Miss : 캐시에 데이터가 없는 경우**
     
     데이터를 요청했을때 캐시에 데이터가 없는 경우
     
-    ![image.png](attachment:32efd819-c873-4520-943e-fcd4be55031f:image.png align="left")
+    ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1748764482610/32028d6d-0826-45bd-8909-ff89f1803bd1.png align="center")
     
 
 ### Write Around 전략
