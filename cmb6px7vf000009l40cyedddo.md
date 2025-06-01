@@ -37,7 +37,7 @@ try {
 
 ### try with resources
 
-만약 try catch fianlly 에서 외부 자원을 반납하는 로직을 실수로 넣지 않았다면 어떻게 될까? try 구문에서 사용한 외부 자원을 finally 구문까지 유지해야할 필요가 있을까?
+만약 try catch finally 에서 외부 자원을 반납하는 로직을 실수로 넣지 않았다면 어떻게 될까? try 구문에서 사용한 외부 자원을 finally 구문까지 유지해야할 필요가 있을까?
 
 try with resources 는 자바 7부터 지원하는 구문으로 AutoCloseable 인터페이스의 close()를 사용해 별도의 로직 없이 외부자원을 반납하도록 한다.
 
@@ -86,11 +86,11 @@ public class NetworkServiceV5 {
 }
 ```
 
-### try catch fianlly 와 비교한 try with resources 의 장점
+### try catch finally 와 비교한 try with resources 의 장점
 
 * 리소스 누수 방지 : 모든 리소스가 제대로 닫히도록 보장한다.
     
-    * fianlly 블럭안에서 자원해제 코드를 누락하는 문제를 예방할 수 있다.
+    * finally 블럭안에서 자원해제 코드를 누락하는 문제를 예방할 수 있다.
         
 * 코드 간결성 : close 호출이 없어 간결하고 읽기 쉬워진다.
     
