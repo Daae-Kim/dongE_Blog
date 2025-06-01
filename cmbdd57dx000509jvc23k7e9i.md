@@ -8,7 +8,7 @@ tags: redis, redis-caching
 
 ---
 
-# 캐시(Cache), 캐싱(Caching)이란?
+## 캐시(Cache), 캐싱(Caching)이란?
 
 캐시란, 원본 저장소보다 빠르게 가져올 수 있는 임시 데이터 저장소
 
@@ -20,7 +20,7 @@ tags: redis, redis-caching
 
 > “이 API는 응답 속도가 너무 느린데? 이 응답 데이터는 **캐싱(Cahing)** 해두고 쓰는 게 어때?’
 
-# 데이터를 캐싱할때 사용하는 전략(Cache Aside, Write Around)
+## 데이터를 캐싱할때 사용하는 전략(Cache Aside, Write Around)
 
 레디스를 캐스로 쓸때 어떤 방식으로 사용할지 전략이 다양하다. 그중에서 현업에서 가장 많이 사용되고 있는 전략 2가지를 배운다.
 
