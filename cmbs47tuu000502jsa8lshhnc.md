@@ -6,6 +6,7 @@ datePublished: Wed Jun 11 2025 15:39:12 GMT+0000 (Coordinated Universal Time)
 cuid: cmbs47tuu000502jsa8lshhnc
 slug: cicd
 cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1749657044339/654ab4cc-82d7-46fd-8f74-41ad5b1dfd8b.png
+ogImage: https://cdn.hashnode.com/res/hashnode/image/upload/v1749657348006/b176d8bd-047e-47b6-b3ed-b31c42a81ef5.png
 tags: cicd, ci-cd, health-check
 
 ---
