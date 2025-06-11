@@ -5,6 +5,7 @@ seoDescription: "CI/CD 도입 후 서버가 온전한지 체크할 수 있는 He
 datePublished: Wed Jun 11 2025 15:39:12 GMT+0000 (Coordinated Universal Time)
 cuid: cmbs47tuu000502jsa8lshhnc
 slug: cicd
+cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1749657044339/654ab4cc-82d7-46fd-8f74-41ad5b1dfd8b.png
 tags: cicd, ci-cd, health-check
 
 ---
@@ -117,3 +118,7 @@ jobs:
 job 분리후 다음과 같이 단계별로 상태를 한눈에 볼 수 있게되었다.
 
 ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1749646443928/7569aa50-53e3-4653-b3fb-1995a8bfa7c3.png align="center")
+
+healthCheck 결과를 함께 볼 수 있으니 더이상 배포 후 사이트를 확인 하는 과정이 줄었다. :)
+
+우리 팀내에서는 모니터링 툴을 따로 사용하지 않고 있어서 healthCheck 를 사용했지만, actulator 과 같은 툴도 좋은 선택이라고 한다.
