@@ -43,6 +43,10 @@ curl 을 사용해서 health check API 에 요청을 보내고, -w 옵션을 사
 
 그래서 각 단계를 job으로 분리하고 needs 키워드를 사용해서 deploy - health\_check - slack\_notify순서로 실행될 수 있도록 재구성 했다.
 
+![github action에서 각 단계의 결과를 한눈에 확인 가능해졌다](https://cdn.hashnode.com/res/hashnode/image/upload/v1749642875548/b812c16f-11fe-44cb-b8b2-b9be3bc2c343.png align="center")
+
+job 분리후 다음과 같이 단계별로 상태를 한눈에 볼 수 있게되었다.
+
 ```bash
 name: CD Deploy
 
@@ -113,10 +117,6 @@ jobs:
             HEALTH_TEXT="미실시"
           fi
 ```
-
-![github action에서 각 단계의 결과를 한눈에 확인 가능해졌다](https://cdn.hashnode.com/res/hashnode/image/upload/v1749642875548/b812c16f-11fe-44cb-b8b2-b9be3bc2c343.png align="center")
-
-job 분리후 다음과 같이 단계별로 상태를 한눈에 볼 수 있게되었다.
 
 ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1749646443928/7569aa50-53e3-4653-b3fb-1995a8bfa7c3.png align="center")
 
