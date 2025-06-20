@@ -23,11 +23,11 @@ CI/CD 적용 후 슬랙에는 배포 성공 알림이 올라왔고, 당연히 �
 
 따라서 CD 의 “성공“이 우리가 바라는 성공 (= 새 코드로 배포 완료, 서비스 작동 완료) 인지 한번 더 검증하는 과정이 필요하다.
 
-그럼 배포 후 서비스가 제대로 작동되는지 어떻게 확인할 수 있을까?
+**그럼 배포 후 서비스가 제대로 작동되는지 어떻게 확인할 수 있을까?**
 
 ### CD + API Health check
 
-CD 의 로직에 api health check 로직을 추가하여 배포 후 api health check 결과를 함께 받을 수 있도록 하면 된다. 이렇게 하면 실제 서버가 제대로 올라갔는지 배포 메세지와 함께 한꺼번에 확인 할 수 있다.
+CD 의 로직에 api health check 로직을 추가하여 배포 후 api health check 결과를 함께 받을 수 있도록 하면 된다. 이렇게 하면 실제 서버가 제대로 올라갔는지 배포 메세지와 함께 한꺼번에 확인 할 수 있을 것이다.
 
 ### 개선
 
@@ -35,11 +35,11 @@ CD 의 로직에 api health check 로직을 추가하여 배포 후 api health c
 HTTP_CODE=$(curl -s -o /dev/null -w "%{http_code}" --max-time 20 https://dev.eeos.econovation.kr/api/health-check)
 ```
 
-curl 을 사용해서 health check API 에 요청을 보내고, -w 옵션을 사용해서 “%{http\_code}“ 응답 HTTP 상태코드만 출력한다. 타임아웃은 10초로 적용시 실패가 나와서 20초로 늘렸다.
+curl 을 사용해서 health check API 에 요청을 보내고, -w 옵션을 사용해서 “%{http\_code}“ 응답 HTTP 상태코드만 출력한다. (타임아웃은 10초로 적용시 실패의 경우가 많아서 넉넉히 20초로 늘렸다.)
 
 이 결과로 받은 HTTP\_CODE 값이 200이면 성공, time out이면 미실시, 이외의 값은 실패로 메세지가 전송된다.
 
-기존에 deploy - healthcheck - slack\_notify 를 순차적으로 실행하기 위해 deploy 의 step 으로 구성했었는데, 각자의 단계에서 어떤것이 실패했는지 한눈에 보기가 어려웠다.
+기존에 deploy → healthcheck → slack\_notify 를 순차적으로 실행하기 위해 deploy 의 step 으로 구성했었는데, 각자의 단계에서 어떤것이 실패했는지 한눈에 보기가 어려웠다.
 
 그래서 각 단계를 job으로 분리하고 needs 키워드를 사용해서 deploy - health\_check - slack\_notify순서로 실행될 수 있도록 재구성 했다.
 
@@ -120,6 +120,6 @@ jobs:
 
 ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1749646443928/7569aa50-53e3-4653-b3fb-1995a8bfa7c3.png align="center")
 
-healthCheck 결과를 함께 볼 수 있으니 더이상 배포 후 사이트를 확인 하는 과정이 줄었다. :)
+healthCheck 결과를 함께 볼 수 있게되어 배포 후 사이트를 추가로 확인 하는 과정이 줄었다 :)
 
-우리 팀내에서는 모니터링 툴을 따로 사용하지 않고 있어서 healthCheck 를 사용했지만, Prometheus과 같은 툴도 좋은 선택이라고 한다.
+우리 팀내에서는 모니터링 툴을 따로 사용하지 않고 있어서 healthCheck 를 사용했지만, Prometheus과 같은 툴도 좋은 선택이라고 한다. CD를 적용하기 전까지는 healthCheck와 같은 배포 외에 다른 역할을 workflow 에 추가하게 될 줄은 몰랐다. 자동화 배포뿐만 아니라 배포 과정에서 미처 인식 하지 못했었던 불편함을 함께 해결하게되어 더욱 뿌듯한 마음이 들었던 경험이다.
