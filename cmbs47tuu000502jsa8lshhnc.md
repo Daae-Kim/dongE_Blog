@@ -5,7 +5,7 @@ seoDescription: "CI/CD 도입 후 서버가 온전한지 체크할 수 있는 He
 datePublished: Wed Jun 11 2025 15:39:12 GMT+0000 (Coordinated Universal Time)
 cuid: cmbs47tuu000502jsa8lshhnc
 slug: cicd
-cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1749657044339/654ab4cc-82d7-46fd-8f74-41ad5b1dfd8b.png
+cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1751797166608/4fa1d585-a5cb-486b-8f91-306efe406bca.png
 ogImage: https://cdn.hashnode.com/res/hashnode/image/upload/v1749657348006/b176d8bd-047e-47b6-b3ed-b31c42a81ef5.png
 tags: cicd, ci-cd, health-check
 
