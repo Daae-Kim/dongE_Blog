@@ -3,7 +3,7 @@ title: "Jpa 영속성 컨텍스트 및 이점"
 datePublished: Sun Jul 06 2025 10:16:55 GMT+0000 (Coordinated Universal Time)
 cuid: cmcripnph000002gpgbkh20i7
 slug: jpa
-cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1751796895847/c044b5e1-a6ff-48e3-bfb7-3aeb49924d02.png
+cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1751797543610/15ca1f7b-8dd3-4f1b-b8f6-7d4da3c0649b.png
 tags: orm, jpa, spring-data-jpa
 
 ---
